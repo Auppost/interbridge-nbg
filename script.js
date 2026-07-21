@@ -1,0 +1,89 @@
+/* Interbridge Nbg e.V. — Startseite (Projektdaten: projects-data.js) */
+
+/* ---------- Bild mit Platzhalter-Fallback ---------- */
+function mountImage(frame, src, alt, contain) {
+  frame.innerHTML = "";
+  frame.classList.remove("placeholder");
+  if (contain) frame.classList.add("contain");
+  if (!src) { frame.classList.add("placeholder"); frame.dataset.ph = frame.dataset.ph || "Foto folgt"; return; }
+  const img = new Image();
+  img.alt = alt || "";
+  img.loading = "lazy";
+  img.onerror = () => { frame.innerHTML = ""; frame.classList.add("placeholder"); frame.dataset.ph = frame.dataset.ph || "Foto folgt"; };
+  img.src = src;
+  frame.appendChild(img);
+}
+
+/* Hero & Team: deklarative Frames aus dem HTML */
+document.querySelectorAll(".ph-frame[data-img]").forEach(f => {
+  mountImage(f, f.dataset.img, f.dataset.alt);
+});
+
+/* ---------- Projektkarten rendern (Link auf Projektseite) ---------- */
+const grid = document.getElementById("projectsGrid");
+const checkIcon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 12l4 4 8-8" stroke="#FF7C3B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const arrowIcon = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#FF7C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+PROJECTS_DATA.forEach(p => {
+  const card = document.createElement("a");
+  card.className = "proj";
+  card.href = "projekte/" + p.slug + ".html";
+  card.innerHTML = `
+    <div class="proj-media">
+      <div class="ph-frame contain" data-ph="Projektfoto"></div>
+      <span class="proj-badge">${checkIcon}Abgeschlossen</span>
+      <span class="proj-cat"></span>
+    </div>
+    <div class="proj-body">
+      <div class="proj-date"></div>
+      <h3></h3>
+      <p class="proj-blurb"></p>
+      <div class="proj-foot">
+        <div>
+          <div class="proj-raised"></div>
+          <div class="proj-impact"></div>
+        </div>
+        <span class="lnk">Details ${arrowIcon}</span>
+      </div>
+    </div>`;
+  card.querySelector(".proj-cat").textContent = p.category;
+  card.querySelector(".proj-date").textContent = p.date;
+  card.querySelector("h3").textContent = p.title;
+  card.querySelector(".proj-blurb").textContent = p.blurb;
+  card.querySelector(".proj-raised").textContent = p.raised;
+  card.querySelector(".proj-impact").textContent = p.impact;
+  mountImage(card.querySelector(".ph-frame"), p.cover, p.title, true);
+  grid.appendChild(card);
+});
+
+/* ---------- Mobile-Menü ---------- */
+const burger = document.getElementById("burgerBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+burger.addEventListener("click", () => {
+  const open = mobileMenu.hidden;
+  mobileMenu.hidden = !open;
+  burger.setAttribute("aria-expanded", String(open));
+});
+mobileMenu.querySelectorAll("a").forEach(a =>
+  a.addEventListener("click", () => { mobileMenu.hidden = true; burger.setAttribute("aria-expanded", "false"); })
+);
+
+/* ---------- Spendenbeträge → PayPal-Link ---------- */
+const paypalCta = document.getElementById("paypalCta");
+const PAYPAL_BASE = "https://paypal.me/InterbridgeNbg";
+document.querySelectorAll(".amount-btn, .amount-free").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".amount-btn, .amount-free").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const amt = btn.dataset.amount;
+    paypalCta.href = amt ? `${PAYPAL_BASE}/${amt}` : PAYPAL_BASE;
+  });
+});
+
+/* ---------- Fehlende Dokumente ---------- */
+document.querySelectorAll(".doc-row[data-missing]").forEach(row => {
+  row.addEventListener("click", e => {
+    e.preventDefault();
+    alert("Das Dokument wird in Kürze verfügbar sein.");
+  });
+});
