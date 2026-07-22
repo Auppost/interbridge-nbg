@@ -87,3 +87,24 @@ document.querySelectorAll(".doc-row[data-missing]").forEach(row => {
     alert("Das Dokument wird in Kürze verfügbar sein.");
   });
 });
+
+/* ---------- IBAN/BIC/Karte per Klick kopieren ---------- */
+document.querySelectorAll(".pay-value.copy").forEach(el => {
+  el.addEventListener("click", async () => {
+    const text = el.dataset.copy;
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    el.classList.add("copied");
+    setTimeout(() => el.classList.remove("copied"), 1600);
+  });
+});
