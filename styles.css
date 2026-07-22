@@ -101,6 +101,7 @@ h1{font-weight:600;font-size:52px;line-height:1.06;letter-spacing:-.02em;margin:
 .r-stats{background:#fff;border:1px solid var(--border);border-radius:18px;padding:26px 20px;display:grid;grid-template-columns:repeat(4,1fr)}
 .r-stats > div{text-align:center;padding:0 12px;border-right:1px solid var(--border)}
 .r-stats > div:last-child{border-right:none}
+.r-stats-2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:460px;margin:0 auto}
 .stat-num{font-size:34px;font-weight:600;color:var(--indigo);line-height:1}
 .stat-label{font-size:13px;color:var(--ink-muted);margin-top:6px}
 
@@ -141,23 +142,6 @@ h1{font-weight:600;font-size:52px;line-height:1.06;letter-spacing:-.02em;margin:
 .proj-impact{font-size:12px;color:var(--ink-muted)}
 .lnk{font-size:13.5px;font-weight:600;color:var(--indigo);display:inline-flex;align-items:center;gap:6px;transition:gap .2s ease}
 .proj:hover .lnk{gap:12px}
-
-/* ============ Laufende Sammlungen ============ */
-.section-campaigns{background:var(--indigo);color:var(--bg);scroll-margin-top:64px}
-.section-campaigns .section-head{margin-bottom:14px}
-.section-campaigns h2{margin-top:14px}
-.campaigns-grid{gap:22px;margin-top:36px}
-.camp-card{background:var(--bg);color:var(--ink-dark);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px}
-.camp-icon{display:inline-flex;width:44px;height:44px;border-radius:12px;background:var(--accent-soft);align-items:center;justify-content:center}
-.camp-card h3{font-weight:600;font-size:21px;margin:0 0 7px}
-.camp-card p{font-size:14px;line-height:1.55;color:var(--ink-mid2);margin:0}
-.camp-progress{margin-top:auto}
-.bar{height:8px;border-radius:6px;background:rgba(50,9,200,.14);overflow:hidden;margin-bottom:8px}
-.fill{height:100%;border-radius:6px;background:var(--orange)}
-.camp-nums{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-muted)}
-.camp-nums b{color:var(--indigo)}
-.camp-cta{text-decoration:none;text-align:center;font-size:14.5px;font-weight:600;color:var(--bg);background:var(--indigo);padding:12px;border-radius:10px}
-.camp-cta:hover{background:#2807a3}
 
 /* ============ Spenden ============ */
 .section-donate{padding-top:66px;padding-bottom:66px;scroll-margin-top:70px}
@@ -205,7 +189,7 @@ h1{font-weight:600;font-size:52px;line-height:1.06;letter-spacing:-.02em;margin:
 .team-head h2{margin:14px 0 8px}
 .team-head p{font-size:15px;color:var(--ink-muted);margin:0}
 .team-head a{color:var(--indigo);text-decoration:none;font-weight:600}
-.r-four{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.team-grid-1{display:flex;justify-content:center}
 .team-member{text-align:center}
 .team-name{font-size:19px;font-weight:600;color:var(--ink-dark)}
 .team-role{font-size:13.5px;color:var(--ink-muted);margin-top:3px}
@@ -215,7 +199,7 @@ h1{font-weight:600;font-size:52px;line-height:1.06;letter-spacing:-.02em;margin:
 .section-docs .inner{padding-top:60px;padding-bottom:60px}
 .section-docs h2{margin:14px 0 12px}
 .docs-lead{font-size:15.5px;line-height:1.6;color:var(--ink-mid2);margin:0}
-.docs-list{display:flex;flex-direction:column;gap:12px}
+.docs-cta .doc-row{width:100%}
 .doc-row{text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:13px;padding:18px 22px;display:flex;align-items:center;gap:16px;transition:border-color .15s ease}
 .doc-row:hover{border-color:rgba(50,9,200,.35)}
 .doc-icon{display:inline-flex;width:42px;height:42px;border-radius:10px;background:var(--accent-soft);align-items:center;justify-content:center;flex:none}
@@ -280,7 +264,6 @@ body.modal-open{overflow:hidden}
   .r-hero{grid-template-columns:1fr;gap:34px}
   .r-two{grid-template-columns:1fr !important;gap:30px}
   .r-three{grid-template-columns:repeat(2,1fr)}
-  .r-four{grid-template-columns:repeat(2,1fr)}
   .r-foot{grid-template-columns:1fr 1fr}
   .pay-methods{grid-template-columns:1fr}
 }
@@ -289,10 +272,9 @@ body.modal-open{overflow:hidden}
   .nav-links{display:none}
   .hdr-right .lang{display:none}
   .burger{display:inline-flex}
-  .r-stats{grid-template-columns:repeat(2,1fr);gap:10px}
+  .r-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .r-stats > div{border-right:none;padding:14px 8px}
   .r-three{grid-template-columns:1fr}
-  .r-four{grid-template-columns:repeat(2,1fr)}
   .r-foot{grid-template-columns:1fr;gap:28px}
   h1{font-size:35px;line-height:1.08}
   h2,.h2-lg,.h2-md{font-size:27px}

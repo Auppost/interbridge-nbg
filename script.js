@@ -80,14 +80,6 @@ document.querySelectorAll(".amount-btn, .amount-free").forEach(btn => {
   });
 });
 
-/* ---------- Fehlende Dokumente ---------- */
-document.querySelectorAll(".doc-row[data-missing]").forEach(row => {
-  row.addEventListener("click", e => {
-    e.preventDefault();
-    alert("Das Dokument wird in Kürze verfügbar sein.");
-  });
-});
-
 /* ---------- IBAN/BIC/Karte per Klick kopieren ---------- */
 document.querySelectorAll(".pay-value.copy").forEach(el => {
   el.addEventListener("click", async () => {
