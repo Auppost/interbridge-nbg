@@ -200,11 +200,11 @@ h1{font-weight:600;font-size:52px;line-height:1.06;letter-spacing:-.02em;margin:
 .section-docs h2{margin:14px 0 12px}
 .docs-lead{font-size:15.5px;line-height:1.6;color:var(--ink-mid2);margin:0}
 .docs-cta .doc-row{width:100%}
-.doc-row{text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:13px;padding:18px 22px;display:flex;align-items:center;gap:16px;transition:border-color .15s ease}
+.doc-row{text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:13px;padding:18px 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;transition:border-color .15s ease}
 .doc-row:hover{border-color:rgba(50,9,200,.35)}
 .doc-icon{display:inline-flex;width:42px;height:42px;border-radius:10px;background:var(--accent-soft);align-items:center;justify-content:center;flex:none}
-.doc-name{flex:1;font-size:15.5px;font-weight:500;color:var(--ink-dark)}
-.doc-dl{font-size:13.5px;font-weight:600;color:var(--indigo);display:inline-flex;align-items:center;gap:6px}
+.doc-name{flex:1;min-width:120px;font-size:15.5px;font-weight:500;color:var(--ink-dark)}
+.doc-dl{font-size:13.5px;font-weight:600;color:var(--indigo);display:inline-flex;align-items:center;gap:6px;overflow-wrap:anywhere;min-width:0}
 
 /* ============ Footer ============ */
 .site-footer{background:var(--ink-dark);color:var(--bg);scroll-margin-top:64px}
@@ -286,4 +286,6 @@ body.modal-open{overflow:hidden}
   .pay-card{padding:20px}
   .pay-row{flex-direction:column;align-items:flex-start;gap:3px}
   .pay-value{text-align:left}
+  .pp-stats{grid-template-columns:repeat(2,1fr)}
+  .pp-gallery{grid-template-columns:repeat(2,1fr)}
 }

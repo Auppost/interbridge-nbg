@@ -9,7 +9,9 @@ let current = 0;
 
 function show(i) {
   current = (i + links.length) % links.length;
+  const img = links[current].querySelector("img");
   lbImg.src = links[current].href;
+  lbImg.alt = img ? img.alt : "";
   lbCount.textContent = (current + 1) + " / " + links.length;
 }
 function openLb(i) {
