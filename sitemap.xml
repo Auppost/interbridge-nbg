@@ -1,53 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://interbridge.eu/</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://interbridge.eu/projekte/ukrainehilfe.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://interbridge.eu/en/</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://interbridge.eu/projekte/soli.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://interbridge.eu/projekte/energie.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://interbridge.eu/projekte/leben.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://interbridge.eu/projekte/eltern.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://interbridge.eu/projekte/erasmus.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://interbridge.eu/projekte/peaceful.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://interbridge.eu/ua/</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://interbridge.eu/impressum.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/impressum.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/impressum.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/impressum.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/impressum.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/en/impressum.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/impressum.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/impressum.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/impressum.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/impressum.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/ua/impressum.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/impressum.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/impressum.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/impressum.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/impressum.html"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://interbridge.eu/datenschutz.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/datenschutz.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/datenschutz.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/datenschutz.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/datenschutz.html"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/en/datenschutz.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/datenschutz.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/datenschutz.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/datenschutz.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/datenschutz.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/ua/datenschutz.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/datenschutz.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/datenschutz.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/datenschutz.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/datenschutz.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/projekte/ukrainehilfe.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/ukrainehilfe.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/ukrainehilfe.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/ukrainehilfe.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/ukrainehilfe.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/en/projekte/ukrainehilfe.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/ukrainehilfe.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/ukrainehilfe.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/ukrainehilfe.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/ukrainehilfe.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/ua/projekte/ukrainehilfe.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/ukrainehilfe.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/ukrainehilfe.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/ukrainehilfe.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/ukrainehilfe.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/projekte/soli.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/soli.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/soli.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/soli.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/soli.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/en/projekte/soli.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/soli.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/soli.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/soli.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/soli.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/ua/projekte/soli.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/soli.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/soli.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/soli.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/soli.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/projekte/energie.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/energie.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/energie.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/energie.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/energie.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/en/projekte/energie.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/energie.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/energie.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/energie.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/energie.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/ua/projekte/energie.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/energie.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/energie.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/energie.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/energie.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/projekte/leben.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/leben.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/leben.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/leben.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/leben.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/en/projekte/leben.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/leben.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/leben.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/leben.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/leben.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/ua/projekte/leben.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/leben.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/leben.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/leben.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/leben.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/projekte/eltern.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/eltern.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/eltern.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/eltern.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/eltern.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/en/projekte/eltern.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/eltern.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/eltern.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/eltern.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/eltern.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/ua/projekte/eltern.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/eltern.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/eltern.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/eltern.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/eltern.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/projekte/erasmus.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/erasmus.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/erasmus.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/erasmus.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/erasmus.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/en/projekte/erasmus.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/erasmus.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/erasmus.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/erasmus.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/erasmus.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/ua/projekte/erasmus.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/erasmus.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/erasmus.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/erasmus.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/erasmus.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/projekte/peaceful.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/peaceful.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/peaceful.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/peaceful.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/peaceful.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/en/projekte/peaceful.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/peaceful.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/peaceful.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/peaceful.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/peaceful.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://interbridge.eu/ua/projekte/peaceful.html</loc>
+      <xhtml:link rel="alternate" hreflang="de" href="https://interbridge.eu/projekte/peaceful.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://interbridge.eu/en/projekte/peaceful.html"/>
+      <xhtml:link rel="alternate" hreflang="uk" href="https://interbridge.eu/ua/projekte/peaceful.html"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://interbridge.eu/projekte/peaceful.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

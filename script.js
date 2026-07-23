@@ -1,15 +1,24 @@
 /* Interbridge Nbg e.V. — Startseite (Projektdaten: projects-data.js) */
 
+/* ---------- Sprache ---------- */
+const LOCALE = ["en", "uk"].includes(document.documentElement.lang) ? document.documentElement.lang : "de";
+const UI_STRINGS = {
+  de: { photoSoon: "Foto folgt", completed: "Abgeschlossen", details: "Details" },
+  en: { photoSoon: "Photo coming soon", completed: "Completed", details: "Details" },
+  uk: { photoSoon: "Фото незабаром", completed: "Завершено", details: "Деталі" },
+};
+const UI = UI_STRINGS[LOCALE];
+
 /* ---------- Bild mit Platzhalter-Fallback ---------- */
 function mountImage(frame, src, alt, contain) {
   frame.innerHTML = "";
   frame.classList.remove("placeholder");
   if (contain) frame.classList.add("contain");
-  if (!src) { frame.classList.add("placeholder"); frame.dataset.ph = frame.dataset.ph || "Foto folgt"; return; }
+  if (!src) { frame.classList.add("placeholder"); frame.dataset.ph = frame.dataset.ph || UI.photoSoon; return; }
   const img = new Image();
   img.alt = alt || "";
   img.loading = "lazy";
-  img.onerror = () => { frame.innerHTML = ""; frame.classList.add("placeholder"); frame.dataset.ph = frame.dataset.ph || "Foto folgt"; };
+  img.onerror = () => { frame.innerHTML = ""; frame.classList.add("placeholder"); frame.dataset.ph = frame.dataset.ph || UI.photoSoon; };
   img.src = src;
   frame.appendChild(img);
 }
@@ -23,15 +32,19 @@ document.querySelectorAll(".ph-frame[data-img]").forEach(f => {
 const grid = document.getElementById("projectsGrid");
 const checkIcon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 12l4 4 8-8" stroke="#FF7C3B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const arrowIcon = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#FF7C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+/* projects-data.js speichert Bildpfade relativ zur Site-Root (z. B. "fotos/x.jpg");
+   auf /en/ und /ua/ liegt die Startseite eine Ebene tiefer, daher hier zurück zur Root. */
+const assetPrefix = LOCALE === "de" ? "" : "../";
 
 PROJECTS_DATA.forEach(p => {
+  const t = p.i18n[LOCALE] || p.i18n.de;
   const card = document.createElement("a");
   card.className = "proj";
   card.href = "projekte/" + p.slug + ".html";
   card.innerHTML = `
     <div class="proj-media">
-      <div class="ph-frame contain" data-ph="Projektfoto"></div>
-      <span class="proj-badge">${checkIcon}Abgeschlossen</span>
+      <div class="ph-frame contain" data-ph="${UI.photoSoon}"></div>
+      <span class="proj-badge">${checkIcon}${UI.completed}</span>
       <span class="proj-cat"></span>
     </div>
     <div class="proj-body">
@@ -43,16 +56,16 @@ PROJECTS_DATA.forEach(p => {
           <div class="proj-raised"></div>
           <div class="proj-impact"></div>
         </div>
-        <span class="lnk">Details ${arrowIcon}</span>
+        <span class="lnk">${UI.details} ${arrowIcon}</span>
       </div>
     </div>`;
-  card.querySelector(".proj-cat").textContent = p.category;
-  card.querySelector(".proj-date").textContent = p.date;
-  card.querySelector("h3").textContent = p.title;
-  card.querySelector(".proj-blurb").textContent = p.blurb;
-  card.querySelector(".proj-raised").textContent = p.raised;
-  card.querySelector(".proj-impact").textContent = p.impact;
-  mountImage(card.querySelector(".ph-frame"), p.cover, p.title, true);
+  card.querySelector(".proj-cat").textContent = t.category;
+  card.querySelector(".proj-date").textContent = t.date;
+  card.querySelector("h3").textContent = t.title;
+  card.querySelector(".proj-blurb").textContent = t.blurb;
+  card.querySelector(".proj-raised").textContent = t.raised;
+  card.querySelector(".proj-impact").textContent = t.impact;
+  mountImage(card.querySelector(".ph-frame"), assetPrefix + p.cover, t.title, true);
   grid.appendChild(card);
 });
 
