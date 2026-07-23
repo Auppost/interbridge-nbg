@@ -11,8 +11,12 @@ fs.mkdirSync(outDir, { recursive: true });
 
 const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
+const BASE_URL = "https://interbridge.eu/";
+
 const page = (p, photos) => {
   const cover = p.cover ? "../" + p.cover : (photos[0] ? "../fotos/" + p.slug + "/" + photos[0] : "");
+  const pageUrl = BASE_URL + "projekte/" + p.slug + ".html";
+  const ogImage = BASE_URL + (p.cover || (photos[0] ? "fotos/" + p.slug + "/" + photos[0] : "interbridge-logo.png"));
   const galleryItems = photos.map((f, i) => {
     const full = "../fotos/" + p.slug + "/" + f;
     const thumb = "../fotos/" + p.slug + "/thumbs/" + f;
@@ -34,11 +38,32 @@ ${galleryItems}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(p.title)} — Interbridge Nbg e.V.</title>
 <meta name="description" content="${esc(p.blurb)} Projekt der gemeinnützigen Organisation Interbridge Nbg e.V. (Nürnberg).">
+<link rel="canonical" href="${pageUrl}">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="Interbridge Nbg e.V.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="${esc(p.title)} — Interbridge Nbg e.V.">
+<meta property="og:description" content="${esc(p.blurb)}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="${pageUrl}">
+<meta property="og:image" content="${ogImage}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(p.title)} — Interbridge Nbg e.V.">
+<meta name="twitter:description" content="${esc(p.blurb)}">
+<meta name="twitter:image" content="${ogImage}">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Interbridge Nbg e.V.", "item": "${BASE_URL}"},
+    {"@type": "ListItem", "position": 2, "name": "Projekte", "item": "${BASE_URL}#projekte"},
+    {"@type": "ListItem", "position": 3, "name": "${esc(p.title)}", "item": "${pageUrl}"}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -104,7 +129,7 @@ ${gallery}
   <div class="container inner" style="padding-top:34px">
     <div class="footer-bottom" style="border-top:none;padding-top:0">
       <span>© 2026 Interbridge Nbg e.V. · <a href="mailto:interbridgenbg@gmail.com" style="color:inherit;text-decoration:none">interbridgenbg@gmail.com</a> · Nürnberg</span>
-      <span class="footer-legal"><a href="../index.html#kontakt">Kontakt</a></span>
+      <span class="footer-legal"><a href="../index.html#kontakt">Kontakt</a><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a></span>
     </div>
   </div>
 </footer>
@@ -135,3 +160,18 @@ for (const p of PROJECTS) {
   total += photos.length;
 }
 console.log(`OK: ${PROJECTS.length} Seiten, ${total} Fotos`);
+
+/* ---------- sitemap.xml ---------- */
+const staticUrls = [
+  { loc: BASE_URL, changefreq: "weekly", priority: "1.0" },
+  ...PROJECTS.map(p => ({ loc: BASE_URL + "projekte/" + p.slug + ".html", changefreq: "monthly", priority: p.slug === "ukrainehilfe" ? "0.8" : "0.7" })),
+  { loc: BASE_URL + "impressum.html", changefreq: "yearly", priority: "0.3" },
+  { loc: BASE_URL + "datenschutz.html", changefreq: "yearly", priority: "0.3" },
+];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${staticUrls.map(u => `  <url>\n    <loc>${u.loc}</loc>\n    <changefreq>${u.changefreq}</changefreq>\n    <priority>${u.priority}</priority>\n  </url>`).join("\n")}
+</urlset>
+`;
+fs.writeFileSync(path.join(root, "sitemap.xml"), sitemap);
+console.log("sitemap.xml aktualisiert");
