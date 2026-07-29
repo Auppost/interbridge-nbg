@@ -276,6 +276,32 @@
   </div>
 </section>
 
+
+<!-- ===== KONTAKTFORMULAR ===== -->
+<section id="schreiben" class="container section-contact">
+  <div class="r-two contact-grid">
+    <div>
+      <span class="eyebrow">Контакты</span>
+      <h2>Напишите нам</h2>
+      <p class="contact-lead">Вопросы, идеи или желание присоединиться — обычно отвечаем в течение 1–2 дней.</p>
+    </div>
+    <form class="contact-form" action="https://formsubmit.co/info@interbridge.eu" method="POST">
+      <input type="hidden" name="_subject" value="Сообщение с interbridge.eu">
+      <input type="hidden" name="_next" value="https://interbridge.eu/ru/?sent=1#schreiben">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="form-note-ok" id="formSent" hidden>Спасибо! Ваше сообщение получено — мы скоро ответим.</div>
+      <label class="field"><span>Имя</span><input type="text" name="name" required autocomplete="name"></label>
+      <label class="field"><span>Эл. почта</span><input type="email" name="email" required autocomplete="email"></label>
+      <label class="field"><span>Сообщение</span><textarea name="message" rows="5" required></textarea></label>
+      <button type="submit" class="btn btn-primary">Отправить сообщение
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#FF7C3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="form-privacy">Отправляя форму, вы соглашаетесь на обработку данных в соответствии с нашей <a href="datenschutz.html">политикой конфиденциальности</a>.</p>
+    </form>
+  </div>
+</section>
+
 <!-- ===== FOOTER ===== -->
 <footer id="kontakt" class="site-footer">
   <div class="container inner">
@@ -315,5 +341,6 @@
 
 <script src="../projects-data.js"></script>
 <script src="../script.js"></script>
+<script data-goatcounter="https://interbridge.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

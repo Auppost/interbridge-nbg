@@ -115,3 +115,12 @@ document.querySelectorAll(".pay-value.copy").forEach(el => {
     setTimeout(() => el.classList.remove("copied"), 1600);
   });
 });
+
+// Kontaktformular: Erfolgsmeldung nach FormSubmit-Redirect (?sent=1)
+if (new URLSearchParams(location.search).has("sent")) {
+  const sentNote = document.getElementById("formSent");
+  if (sentNote) {
+    sentNote.hidden = false;
+    sentNote.scrollIntoView({ block: "center" });
+  }
+}
