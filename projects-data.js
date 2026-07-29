@@ -92,8 +92,8 @@ const PROJECTS_DATA = [
       },
       uk: {
         category: "Термінова допомога", date: "Зимова допомога", title: "Енергія для України",
-        blurb: "Генератори та потужні павербанки на випадок блекауту.",
-        detail: "Після атак на енергосистему ми закупили генератори та потужні павербанки і доставили їх в Україну — світло й тепло для родин та закладів.",
+        blurb: "Генератори та зарядні станції на випадок блекауту.",
+        detail: "Після атак на енергосистему ми закупили генератори та зарядні станції і доставили їх в Україну — світло й тепло для родин та закладів.",
         raised: "Завершено", impact: "Передані генератори", reach: "Родини"
       },
       fr: {
@@ -127,7 +127,7 @@ const PROJECTS_DATA = [
         raised: "Completed", impact: "Equipment handed over", reach: "Rescue workers"
       },
       uk: {
-        category: "Здоров'я", date: "Завершено", title: "Рятуємо життя — боремося з отруєнням чадним газом",
+        category: "Здоров'я", date: "Завершено", title: "Рятуємо життя — захищаємо від отруєння димом",
         blurb: "Захисне спорядження від отруєння димом.",
         detail: "Отруєння димом — одна з найпоширеніших причин смерті під час пожеж та обстрілів. Ми закупили захисне спорядження та передали його рятувальникам і цивільним.",
         raised: "Завершено", impact: "Передане спорядження", reach: "Рятувальники"
@@ -139,7 +139,7 @@ const PROJECTS_DATA = [
         raised: "Terminé", impact: "Équipements remis", reach: "Secouristes"
       },
       ru: {
-        category: "Здоровье", date: "Завершено", title: "Спасаем жизни — боремся с отравлением угарным газом",
+        category: "Здоровье", date: "Завершено", title: "Спасаем жизни — защищаем от отравления дымом",
         blurb: "Защитное снаряжение от отравления дымом.",
         detail: "Отравление дымом — одна из самых частых причин смерти при пожарах и обстрелах. Мы закупили защитное снаряжение и передали его спасателям и гражданским.",
         raised: "Завершено", impact: "Передано снаряжение", reach: "Спасатели"
@@ -169,7 +169,7 @@ const PROJECTS_DATA = [
         raised: "Триває", impact: "Люди похилого віку", reach: "Постійно"
       },
       fr: {
-        category: "Social", date: "En cours", title: "Il n'y a pas de parents âgés étrangers !",
+        category: "Social", date: "En cours", title: "Aucun parent âgé ne nous est étranger !",
         blurb: "Soutien aux personnes âgées en difficulté.",
         detail: "La guerre frappe particulièrement durement les personnes âgées. Nous soutenons les seniors avec de la nourriture, des médicaments et une attention personnelle — personne ne doit rester seul.",
         raised: "En cours", impact: "Personnes âgées", reach: "En continu"
