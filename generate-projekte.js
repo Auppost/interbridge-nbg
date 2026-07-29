@@ -11,10 +11,20 @@ const root = __dirname;
 const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 const SITE_ROOT = "https://interbridge.eu/";
-const LOCALES = ["de", "en", "uk"];
-const URL_PREFIX = { de: "", en: "en/", uk: "ua/" };
-const OG_LOCALE = { de: "de_DE", en: "en_US", uk: "uk_UA" };
-const LANG_LABEL = { de: "DE", en: "EN", uk: "UA" };
+const LOCALES = ["de", "en", "uk", "fr", "ru"];
+const URL_PREFIX = { de: "", en: "en/", uk: "ua/", fr: "fr/", ru: "ru/" };
+const OG_LOCALE = { de: "de_DE", en: "en_US", uk: "uk_UA", fr: "fr_FR", ru: "ru_RU" };
+const LANG_NAME = { de: "Deutsch", en: "English", uk: "Українська", fr: "Français", ru: "Русский" };
+
+/* Flaggen als Inline-SVG. RU absichtlich weiß-blau-weiß (Antikriegsflagge),
+   nicht die offizielle Trikolore. */
+const FLAGS = {
+  de: '<svg class="lang-flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#000"/><rect y="0.667" width="3" height="1.333" fill="#DD0000"/><rect y="1.333" width="3" height="0.667" fill="#FFCE00"/></svg>',
+  en: '<svg class="lang-flag" viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="3.5"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/></svg>',
+  uk: '<svg class="lang-flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="1" fill="#005BBB"/><rect y="1" width="3" height="1" fill="#FFD500"/></svg>',
+  fr: '<svg class="lang-flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>',
+  ru: '<svg class="lang-flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#fff"/><rect y="0.667" width="3" height="0.667" fill="#0039A6"/></svg>',
+};
 
 const UI = {
   de: {
@@ -65,6 +75,38 @@ const UI = {
     metaSuffix: blurb => `${blurb} Проєкт громадської організації Interbridge Nbg e.V. (Нюрнберг, Німеччина).`,
     photoAlt: (title, i) => `${title} — фото ${i}`,
   },
+  fr: {
+    nav: { ueber: "À propos", projekte: "Projets", spenden: "Faire un don", kontakt: "Contact" },
+    navAria: "Navigation principale", langAria: "Langue",
+    donateBtn: "Faire un don", menuLabel: "Menu",
+    back: "Tous les projets",
+    galleryHeading: n => `Photos du projet · ${n} photo${n === 1 ? "" : "s"}`,
+    galleryHeadingEmpty: "Photos du projet",
+    galleryEmpty: "Les photos de ce projet arriveront bientôt.",
+    statRaised: "collecté et utilisé", statReach: "personnes touchées", statFunds: "des fonds utilisés",
+    ctaPrimary: "Soutenir un projet similaire", ctaSecondary: "Autres projets",
+    footerKontakt: "Contact", footerImpressum: "Mentions légales", footerDatenschutz: "Confidentialité",
+    lbClose: "Fermer", lbPrev: "Précédent", lbNext: "Suivant",
+    completedBadge: "Terminé",
+    metaSuffix: blurb => `${blurb} Un projet de l'organisation à but non lucratif Interbridge Nbg e.V. (Nuremberg, Allemagne).`,
+    photoAlt: (title, i) => `${title} — photo ${i}`,
+  },
+  ru: {
+    nav: { ueber: "О нас", projekte: "Проекты", spenden: "Пожертвовать", kontakt: "Контакты" },
+    navAria: "Главная навигация", langAria: "Язык",
+    donateBtn: "Пожертвовать", menuLabel: "Меню",
+    back: "Все проекты",
+    galleryHeading: n => `Фото проекта · ${n} фото`,
+    galleryHeadingEmpty: "Фото проекта",
+    galleryEmpty: "Фотографии этого проекта появятся в ближайшее время.",
+    statRaised: "собрано и использовано", statReach: "людей охвачено", statFunds: "средств использовано",
+    ctaPrimary: "Поддержать похожий проект", ctaSecondary: "Другие проекты",
+    footerKontakt: "Контакты", footerImpressum: "Выходные данные", footerDatenschutz: "Конфиденциальность",
+    lbClose: "Закрыть", lbPrev: "Назад", lbNext: "Далее",
+    completedBadge: "Завершено",
+    metaSuffix: blurb => `${blurb} Проект некоммерческой организации Interbridge Nbg e.V. (Нюрнберг, Германия).`,
+    photoAlt: (title, i) => `${title} — фото ${i}`,
+  },
 };
 
 const upPath = n => "../".repeat(n);
@@ -102,8 +144,8 @@ ${galleryItems}
   ).join("\n") + `\n<link rel="alternate" hreflang="x-default" href="${SITE_ROOT}projekte/${p.slug}.html">`;
 
   const langSwitcher = LOCALES.map(l => {
-    if (l === locale) return `<span class="lang-active">${LANG_LABEL[l]}</span>`;
-    return `<a class="lang-idle" href="${crossHref(locale, true, l, "projekte/" + p.slug + ".html")}">${LANG_LABEL[l]}</a>`;
+    if (l === locale) return `<span class="lang-active" title="${LANG_NAME[l]}">${FLAGS[l]}</span>`;
+    return `<a class="lang-idle" href="${crossHref(locale, true, l, "projekte/" + p.slug + ".html")}" title="${LANG_NAME[l]}" aria-label="${LANG_NAME[l]}">${FLAGS[l]}</a>`;
   }).join("\n        ");
 
   return `<!DOCTYPE html>
@@ -270,6 +312,6 @@ ${sitemapUrls}
 </urlset>
 `;
 fs.writeFileSync(path.join(root, "sitemap.xml"), sitemap);
-console.log("sitemap.xml aktualisiert (mit hreflang, 3 Sprachen)");
+console.log(`sitemap.xml aktualisiert (mit hreflang, ${LOCALES.length} Sprachen)`);
 
-module.exports = { UI, LOCALES, URL_PREFIX, SITE_ROOT, OG_LOCALE, LANG_LABEL, crossHref, upPath, esc };
+module.exports = { UI, LOCALES, URL_PREFIX, SITE_ROOT, OG_LOCALE, LANG_NAME, FLAGS, crossHref, upPath, esc };

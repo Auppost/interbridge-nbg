@@ -1,11 +1,13 @@
 /* Interbridge Nbg e.V. — Startseite (Projektdaten: projects-data.js) */
 
 /* ---------- Sprache ---------- */
-const LOCALE = ["en", "uk"].includes(document.documentElement.lang) ? document.documentElement.lang : "de";
+const LOCALE = ["en", "uk", "fr", "ru"].includes(document.documentElement.lang) ? document.documentElement.lang : "de";
 const UI_STRINGS = {
   de: { photoSoon: "Foto folgt", completed: "Abgeschlossen", details: "Details" },
   en: { photoSoon: "Photo coming soon", completed: "Completed", details: "Details" },
   uk: { photoSoon: "Фото незабаром", completed: "Завершено", details: "Деталі" },
+  fr: { photoSoon: "Photo à venir", completed: "Terminé", details: "Détails" },
+  ru: { photoSoon: "Фото скоро появится", completed: "Завершено", details: "Подробнее" },
 };
 const UI = UI_STRINGS[LOCALE];
 

@@ -23,6 +23,18 @@ const PROJECTS_DATA = [
         blurb: "Гуманітарна допомога та речові пожертви для людей в Україні.",
         detail: "Наш основний проєкт: ми збираємо, закуповуємо та доставляємо гуманітарні вантажі — від медикаментів до товарів першої необхідності — і передаємо їх партнерам на місці з повною документацією.",
         raised: "Триває", impact: "Гуманітарні поставки в Україну", reach: "1000+"
+      },
+      fr: {
+        category: "Aide d'urgence", date: "En cours depuis 2022", title: "Aide à l'Ukraine",
+        blurb: "Aide humanitaire et dons en nature pour les personnes en Ukraine.",
+        detail: "Notre projet principal : nous collectons, achetons et livrons des biens humanitaires — des médicaments aux produits de première nécessité — et les remettons à nos partenaires sur place avec une documentation complète.",
+        raised: "En cours", impact: "Livraisons d'aide vers l'Ukraine", reach: "1 000+"
+      },
+      ru: {
+        category: "Экстренная помощь", date: "Продолжается с 2022 года", title: "Помощь Украине",
+        blurb: "Гуманитарная помощь и вещевые пожертвования для людей в Украине.",
+        detail: "Наш главный проект: мы собираем, закупаем и доставляем гуманитарные грузы — от медикаментов до товаров первой необходимости — и передаём их партнёрам на месте с полной документацией.",
+        raised: "Продолжается", impact: "Гуманитарные поставки в Украину", reach: "1000+"
       }
     }
   },
@@ -47,6 +59,18 @@ const PROJECTS_DATA = [
         blurb: "Мітинги та вуличні акції в Нюрнберзі.",
         detail: "За допомогою мітингів та вуличних акцій ми привертаємо увагу громадськості до війни в Україні, інформуємо людей і збираємо кошти для наших гуманітарних проєктів.",
         raised: "Регулярно", impact: "Мітинги та акції", reach: "Публічно"
+      },
+      fr: {
+        category: "Sensibilisation", date: "En cours", title: "Solidarité avec l'Ukraine",
+        blurb: "Rassemblements et actions de rue à Nuremberg.",
+        detail: "Par des rassemblements et des actions de rue, nous maintenons l'attention du public sur la guerre en Ukraine, informons la population et collectons des dons pour nos projets humanitaires.",
+        raised: "Régulièrement", impact: "Rassemblements et actions", reach: "Public"
+      },
+      ru: {
+        category: "Общественные акции", date: "Продолжается", title: "Солидарность с Украиной",
+        blurb: "Митинги и уличные акции в Нюрнберге.",
+        detail: "С помощью митингов и уличных акций мы удерживаем внимание общественности на войне в Украине, информируем людей и собираем пожертвования для наших гуманитарных проектов.",
+        raised: "Регулярно", impact: "Митинги и акции", reach: "Публично"
       }
     }
   },
@@ -71,6 +95,18 @@ const PROJECTS_DATA = [
         blurb: "Генератори та потужні павербанки на випадок блекауту.",
         detail: "Після атак на енергосистему ми закупили генератори та потужні павербанки і доставили їх в Україну — світло й тепло для родин та закладів.",
         raised: "Завершено", impact: "Передані генератори", reach: "Родини"
+      },
+      fr: {
+        category: "Aide d'urgence", date: "Aide hivernale", title: "De l'énergie pour l'Ukraine",
+        blurb: "Générateurs et stations d'énergie contre les coupures de courant.",
+        detail: "Après les attaques contre le réseau électrique, nous avons acheté des générateurs et des stations d'énergie et les avons acheminés en Ukraine — de l'électricité et de la chaleur pour les familles et les institutions.",
+        raised: "Terminé", impact: "Générateurs remis", reach: "Familles"
+      },
+      ru: {
+        category: "Экстренная помощь", date: "Зимняя помощь", title: "Энергия для Украины",
+        blurb: "Генераторы и мощные зарядные станции на случай блэкаута.",
+        detail: "После атак на энергосистему мы закупили генераторы и зарядные станции и доставили их в Украину — свет и тепло для семей и учреждений.",
+        raised: "Завершено", impact: "Переданы генераторы", reach: "Семьи"
       }
     }
   },
@@ -95,6 +131,18 @@ const PROJECTS_DATA = [
         blurb: "Захисне спорядження від отруєння димом.",
         detail: "Отруєння димом — одна з найпоширеніших причин смерті під час пожеж та обстрілів. Ми закупили захисне спорядження та передали його рятувальникам і цивільним.",
         raised: "Завершено", impact: "Передане спорядження", reach: "Рятувальники"
+      },
+      fr: {
+        category: "Santé", date: "Terminé", title: "Sauver des vies — lutter contre l'intoxication par la fumée",
+        blurb: "Équipements de protection contre l'intoxication par la fumée.",
+        detail: "L'intoxication par la fumée est l'une des causes de décès les plus fréquentes lors d'incendies et de bombardements. Nous avons acheté des équipements de protection et les avons remis aux secouristes et aux civils.",
+        raised: "Terminé", impact: "Équipements remis", reach: "Secouristes"
+      },
+      ru: {
+        category: "Здоровье", date: "Завершено", title: "Спасаем жизни — боремся с отравлением угарным газом",
+        blurb: "Защитное снаряжение от отравления дымом.",
+        detail: "Отравление дымом — одна из самых частых причин смерти при пожарах и обстрелах. Мы закупили защитное снаряжение и передали его спасателям и гражданским.",
+        raised: "Завершено", impact: "Передано снаряжение", reach: "Спасатели"
       }
     }
   },
@@ -119,6 +167,18 @@ const PROJECTS_DATA = [
         blurb: "Підтримка людей похилого віку в скруті.",
         detail: "Війна особливо тяжко б'є по людях похилого віку. Ми підтримуємо їх продуктами, ліками та особистою турботою — ніхто не повинен залишатися наодинці.",
         raised: "Триває", impact: "Люди похилого віку", reach: "Постійно"
+      },
+      fr: {
+        category: "Social", date: "En cours", title: "Il n'y a pas de parents âgés étrangers !",
+        blurb: "Soutien aux personnes âgées en difficulté.",
+        detail: "La guerre frappe particulièrement durement les personnes âgées. Nous soutenons les seniors avec de la nourriture, des médicaments et une attention personnelle — personne ne doit rester seul.",
+        raised: "En cours", impact: "Personnes âgées", reach: "En continu"
+      },
+      ru: {
+        category: "Социальная помощь", date: "Продолжается", title: "Чужих пожилых родителей не бывает!",
+        blurb: "Поддержка пожилых людей в беде.",
+        detail: "Война особенно тяжело бьёт по пожилым людям. Мы поддерживаем их продуктами, лекарствами и личной заботой — никто не должен оставаться один.",
+        raised: "Продолжается", impact: "Пожилые люди", reach: "Постоянно"
       }
     }
   },
@@ -143,6 +203,18 @@ const PROJECTS_DATA = [
         blurb: "Міжнародний молодіжний обмін у Європі.",
         detail: "У межах програми Erasmus+ ми дали молодим людям можливість міжнародних зустрічей — культурний обмін, що будує мости між країнами та поколіннями.",
         raised: "Профінансовано", impact: "Молодіжний обмін", reach: "Молодь"
+      },
+      fr: {
+        category: "Éducation", date: "Terminé", title: "Mobilité des jeunes Erasmus+",
+        blurb: "Échange international de jeunes en Europe.",
+        detail: "Dans le cadre d'Erasmus+, nous avons permis à des jeunes de participer à des rencontres internationales — un échange culturel qui construit des ponts entre les pays et les générations.",
+        raised: "Financé", impact: "Échange de jeunes", reach: "Jeunes"
+      },
+      ru: {
+        category: "Образование", date: "Завершено", title: "Молодёжная мобильность Erasmus+",
+        blurb: "Международный молодёжный обмен в Европе.",
+        detail: "В рамках программы Erasmus+ мы дали молодым людям возможность международных встреч — культурный обмен, который строит мосты между странами и поколениями.",
+        raised: "Профинансировано", impact: "Молодёжный обмен", reach: "Молодёжь"
       }
     }
   },
@@ -167,6 +239,18 @@ const PROJECTS_DATA = [
         blurb: "Тиждень футболу під мирним небом для дітей з Києва.",
         detail: "28 дітей з ФК «Атлет» Київ — три повні команди U12 — провели тиждень у Нюрнберзі, де могли спати, тренуватися й грати без повітряних тривог. Наостанок хлопці здобули золото на міжнародному міжкультурному футбольному фестивалі в Лейпцигу — з перемогою 2:1 у фіналі над господарями BSG Chemie Leipzig.",
         raised: "Завершено", impact: "Футбольний тиждень і перемога в турнірі", reach: "28 дітей"
+      },
+      fr: {
+        category: "Sport", date: "Terminé", title: "Piece of Peaceful Sky",
+        blurb: "Une semaine de football sous un ciel paisible pour des enfants de Kyiv.",
+        detail: "28 enfants du FC « Atlet » Kyiv — trois équipes U12 complètes — ont passé une semaine à Nuremberg à dormir, s'entraîner et jouer sans alertes aériennes. Pour couronner le tout, les garçons ont remporté l'or au festival international et interculturel de football de Leipzig — avec une victoire 2:1 en finale contre les hôtes du BSG Chemie Leipzig.",
+        raised: "Terminé", impact: "Semaine de football et victoire au tournoi", reach: "28 enfants"
+      },
+      ru: {
+        category: "Спорт", date: "Завершено", title: "Piece of Peaceful Sky",
+        blurb: "Неделя футбола под мирным небом для детей из Киева.",
+        detail: "28 детей из ФК «Атлет» Киев — три полные команды U12 — провели неделю в Нюрнберге, где могли спать, тренироваться и играть без воздушных тревог. В завершение ребята взяли золото на международном межкультурном футбольном фестивале в Лейпциге — с победой 2:1 в финале над хозяевами BSG Chemie Leipzig.",
+        raised: "Завершено", impact: "Футбольная неделя и победа в турнире", reach: "28 детей"
       }
     }
   },
