@@ -187,14 +187,14 @@ ${hreflangTags}
 
 <header class="site-header">
   <div class="hdr">
-    <a href="../index.html" class="logo-link">
+    <a href="../" class="logo-link">
       <img src="${assetPrefix}interbridge-logo.png" alt="interbridge Nürnberg e.V." class="logo-img">
     </a>
     <nav class="nav-links" aria-label="${ui.navAria}">
-      <a href="../index.html#ueber">${esc(ui.nav.ueber)}</a>
-      <a href="../index.html#projekte">${esc(ui.nav.projekte)}</a>
-      <a href="../index.html#spenden">${esc(ui.nav.spenden)}</a>
-      <a href="../index.html#kontakt">${esc(ui.nav.kontakt)}</a>
+      <a href="../#ueber">${esc(ui.nav.ueber)}</a>
+      <a href="../#projekte">${esc(ui.nav.projekte)}</a>
+      <a href="../#spenden">${esc(ui.nav.spenden)}</a>
+      <a href="../#kontakt">${esc(ui.nav.kontakt)}</a>
     </nav>
     <div class="hdr-right">
       <div class="lang" aria-label="${ui.langAria}">
@@ -207,10 +207,10 @@ ${hreflangTags}
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu" hidden>
-    <a href="../index.html#ueber">${esc(ui.nav.ueber)}</a>
-    <a href="../index.html#projekte">${esc(ui.nav.projekte)}</a>
-    <a href="../index.html#spenden">${esc(ui.nav.spenden)}</a>
-    <a href="../index.html#kontakt">${esc(ui.nav.kontakt)}</a>
+    <a href="../#ueber">${esc(ui.nav.ueber)}</a>
+    <a href="../#projekte">${esc(ui.nav.projekte)}</a>
+    <a href="../#spenden">${esc(ui.nav.spenden)}</a>
+    <a href="../#kontakt">${esc(ui.nav.kontakt)}</a>
     <div class="lang lang-mobile">
       ${langSwitcher}
     </div>
@@ -226,7 +226,7 @@ ${cover ? `<div class="pp-hero">
 </div>` : ""}
 
 <main class="container pp-head">
-  <a class="pp-back" href="../index.html#projekte">
+  <a class="pp-back" href="../#projekte">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M19 12H5m6 6l-6-6 6-6" stroke="#FF7C3B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     ${esc(ui.back)}
   </a>
@@ -242,10 +242,10 @@ ${cover ? `<div class="pp-hero">
 ${gallery}
 
   <div class="pp-cta-row">
-    <a href="../index.html#spenden" class="btn btn-primary">${esc(ui.ctaPrimary)}
+    <a href="../#spenden" class="btn btn-primary">${esc(ui.ctaPrimary)}
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#FF7C3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <a href="../index.html#projekte" class="btn btn-outline">${esc(ui.ctaSecondary)}</a>
+    <a href="../#projekte" class="btn btn-outline">${esc(ui.ctaSecondary)}</a>
   </div>
 </main>
 
@@ -253,7 +253,7 @@ ${gallery}
   <div class="container inner" style="padding-top:34px">
     <div class="footer-bottom" style="border-top:none;padding-top:0">
       <span>© 2026 Interbridge Nbg e.V. · <a href="mailto:info@interbridge.eu" style="color:inherit;text-decoration:none">info@interbridge.eu</a> · Nürnberg</span>
-      <span class="footer-legal"><a href="../index.html#kontakt">${esc(ui.footerKontakt)}</a><a href="../impressum.html">${esc(ui.footerImpressum)}</a><a href="../datenschutz.html">${esc(ui.footerDatenschutz)}</a></span>
+      <span class="footer-legal"><a href="../#kontakt">${esc(ui.footerKontakt)}</a><a href="../impressum.html">${esc(ui.footerImpressum)}</a><a href="../datenschutz.html">${esc(ui.footerDatenschutz)}</a></span>
     </div>
   </div>
 </footer>
