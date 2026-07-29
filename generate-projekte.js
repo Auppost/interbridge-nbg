@@ -170,7 +170,7 @@ ${hreflangTags}
 <meta name="twitter:description" content="${esc(t.blurb)}">
 <meta name="twitter:image" content="${ogImage}">
 <link rel="icon" href="${assetPrefix}favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="${assetPrefix}styles.css?v=2">
+<link rel="stylesheet" href="${assetPrefix}styles.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -266,7 +266,7 @@ ${gallery}
   <span class="lb-count" id="lbCount"></span>
 </div>
 
-<script src="${assetPrefix}projekt.js?v=2"></script>
+<script src="${assetPrefix}projekt.js?v=3"></script>
 <script data-goatcounter="https://interbridge.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

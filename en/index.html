@@ -25,7 +25,7 @@
 <meta name="twitter:description" content="Non-profit NGO from Nuremberg: Ukraine relief, cultural and humanitarian projects. 100% of your donation goes directly to the projects.">
 <meta name="twitter:image" content="https://interbridge.eu/fotos/ukrainehilfe-1.jpg">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../styles.css?v=2">
+<link rel="stylesheet" href="../styles.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -285,11 +285,12 @@
       <h2>Write to us</h2>
       <p class="contact-lead">Questions, ideas or a wish to get involved — we usually reply within 1–2 days.</p>
     </div>
-    <form class="contact-form" action="https://formsubmit.co/info@interbridge.eu" method="POST">
+    <form class="contact-form" id="contactForm" data-sending="Sending…" action="https://formsubmit.co/info@interbridge.eu" method="POST">
       <input type="hidden" name="_subject" value="Message via interbridge.eu">
       <input type="hidden" name="_next" value="https://interbridge.eu/en/?sent=1#schreiben">
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="form-note-warn" id="formFail" hidden>The sending service is currently unreachable — we've opened your email app with the message ready to go. Just hit send.</div>
       <div class="form-note-ok" id="formSent" hidden>Thank you! Your message has arrived — we'll get back to you soon.</div>
       <label class="field"><span>Name</span><input type="text" name="name" required autocomplete="name"></label>
       <label class="field"><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
@@ -339,8 +340,8 @@
   </div>
 </footer>
 
-<script src="../projects-data.js?v=2"></script>
-<script src="../script.js?v=2"></script>
+<script src="../projects-data.js?v=3"></script>
+<script src="../script.js?v=3"></script>
 <script data-goatcounter="https://interbridge.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

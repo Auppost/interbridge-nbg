@@ -124,3 +124,43 @@ if (new URLSearchParams(location.search).has("sent")) {
     sentNote.scrollIntoView({ block: "center" });
   }
 }
+
+// Kontaktformular: AJAX-Versand mit Mailto-Fallback, falls formsubmit.co nicht erreichbar ist
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const okNote = document.getElementById("formSent");
+    const failNote = document.getElementById("formFail");
+    const name = contactForm.elements.name.value.trim();
+    const email = contactForm.elements.email.value.trim();
+    const message = contactForm.elements.message.value.trim();
+    const subject = contactForm.querySelector('input[name="_subject"]').value;
+    const btnLabel = btn.innerHTML;
+    btn.disabled = true;
+    btn.textContent = contactForm.dataset.sending || "…";
+    okNote.hidden = true;
+    failNote.hidden = true;
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/info@interbridge.eu", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ name, email, message, _subject: subject }),
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      okNote.hidden = false;
+      okNote.scrollIntoView({ block: "center" });
+      contactForm.reset();
+    } catch (err) {
+      const body = message + "\n\n" + name + " · " + email;
+      location.href = "mailto:info@interbridge.eu?subject=" +
+        encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      failNote.hidden = false;
+      failNote.scrollIntoView({ block: "center" });
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = btnLabel;
+    }
+  });
+}

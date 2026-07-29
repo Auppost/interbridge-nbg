@@ -332,3 +332,4 @@ body.modal-open{overflow:hidden}
 .form-privacy{font-size:12.5px;line-height:1.55;color:var(--ink-muted);margin:0}
 .form-privacy a{color:var(--indigo)}
 .form-note-ok{background:#E9F6E2;border:1px solid #B4DCA0;color:#2F6B1F;border-radius:12px;padding:12px 15px;font-size:14.5px;line-height:1.5}
+.form-note-warn{background:#FFF3E8;border:1px solid #F5C9A8;color:#8A4A1B;border-radius:12px;padding:12px 15px;font-size:14.5px;line-height:1.5}
